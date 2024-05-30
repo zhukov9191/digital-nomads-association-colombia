@@ -1,27 +1,29 @@
 ---
-import About from "./about.astro"
+import About from "./about.astro";
 ---
 
 <header>
+  <div class="logo">
+    <!-- <img src="" alt=""> -->
+    <a href="">LOGO</a>
+  </div>
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
   <nav>
-    <div class="logo">
-      <!-- <img src="" alt=""> -->
-      <a href="">LOGO</a>
-      <input type="checkbox" id="menu">
-      <label for="menu">
-        <i class="fa-solid fa-bars"></i>
-      </label>
-    </div>
-    <div class="menu">
-      <a href="">Home</a>
-      <a href="">About</a>
-      <a href="">Parners</a>
-      <a href="">Team</a>
-      <a href="">Contact us</a>
-      <a href="">Nomad Visa</a>
-    </div>
+    <ul>
+      <li><a class="active" id="banner" href="">Home</a></li>
+      <li><a id="about" href="">About</a></li>
+      <li><a href="">Parners</a></li>
+      <li><a href="">Team</a></li>
+      <li><a href="">Contact us</a></li>
+      <li class="excepto"><a  href="">Nomad Visa</a></li>
+    </ul>
   </nav>
 </header>
+
 
 
 <style>
@@ -29,45 +31,113 @@ import About from "./about.astro"
     position: fixed;
     top: 0;
     left: 0;
+    background-color: transparent;
     width: 100%;
-    background: transparent;
-    min-height: 50px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
-    transition: 0.6s;
     align-items: center;
+    padding: 0 80px;
+    box-sizing: border-box;
     z-index: 1;
-    padding: 1rem 0 0 0;
+    
   }
-  header .logo {
-    position: relative;
-    transition: 0.6s;
-    font-weight: 800;
-    letter-spacing: 1px;
+  header a{
+    text-decoration: none;
   }
-  nav {
+  nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    margin: 0 2rem;
-    padding: 0 20px;
   }
-  nav a {
-    text-decoration: none;
-    color: #000;
-    font-size: 1.3rem;
-    font-weight: 600;
+  nav ul li{
+    padding-right: 1rem;
+    list-style: none;
   }
-  .menu a {
-    margin: 0 0.5rem;
+  nav ul li .active{
+    background: #fefefe;
+    color: #202020;
   }
-  .sticky{
-    background: rgba(0, 0, 0, 0.25);
+  
+  nav ul li a{
+    display: block;
+    font-size: 20px;
+    padding: 10px 10px;
+    /* margin: 0 5px; */
+    border-radius: 50px;
+    transition: .8s;
+  }
+  nav ul li a:hover{
+    background: #fefefe;
+    
+  }
+  .sticky {
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
+    transition: 1.2s;
   }
-  .sticky nav a, .logo{
-    color: white;
+  @media (max-width:1320px) {
+    header{
+      padding: 0 50px;
+    }
+  }
+    @media (max-width:1100px) {
+    header{
+      padding: 0 30px;
+    }
+  }
+
+  @media (max-width:900px) {
+    .hamburger{
+      display: block;
+      cursor: pointer;
+    }
+    .hamburger .line{
+      width: 30px;
+      height: 3px;
+      background: #fefefe;
+      margin: 5px 0;
+      border-radius: 2px;
+    }
+    nav{
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100vw;
+      height: 0px;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(5px);
+      transition: 0.2s;
+      overflow: hidden;
+    }
+    nav ul{
+      display: block;
+      width: fit-content;
+      text-align: center;
+      margin: 6rem auto 0 auto;
+      transition: 0.5s;
+      opacity: 0;
+    }
+    .active{
+      padding: 10px 10px;
+      background: #202020;
+      color: #fefe;
+    }
+    nav.nav-bar{
+      height: 450px;
+      transition: 0.9s;
+    }
+    nav.nav-bar ul{
+      opacity: 1;
+    }
+    nav ul li a{
+      
+    }
+    nav ul li a:hover{
+      padding: 10px 10px;
+      background: #202020;
+      color: #fefe;
+    }
   }
 </style>
+

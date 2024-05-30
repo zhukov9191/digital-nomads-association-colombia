@@ -3,23 +3,61 @@ import Layout from "../components/layout.astro";
 import Header from "../components/header.astro";
 import Banner from "../components/banner.astro";
 import About from "../components/about.astro";
+import Cards from "../components/cards.astro";
+import SliderPartners from "../components/sliderPartners.astro"
 ---
 
-<Layout>
-  <html lang="en">
-    <head>
-      <meta charset="utf-8" />
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <meta name="viewport" content="width=device-width" />
-      <meta name="generator" content={Astro.generator} />
-    </head>
-    <body>
-      <Header />
-      <Banner />
-      <About />
-	  <About />
-	  <About />
-	  <About />
-    </body>
-  </html>
-</Layout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>DNAcol</title>
+  </head>
+  <body>
+    <Header />
+    <Banner />
+    <About />
+    <Cards />
+    <SliderPartners/>
+
+    <script type="text/javascript">
+      window.addEventListener("scroll", () => {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY != 0);
+      });
+    </script>
+    <script type="text/javascript">
+      hamburger = document.querySelector(".hamburger");
+      hamburger.onclick = () => {
+        nav = document.querySelector("nav");
+        nav.classList.toggle("nav-bar");
+      };
+    </script>
+
+    <script
+      src="https://kit.fontawesome.com/b992314f76.js"
+      crossorigin="anonymous">
+    </script>
+  </body>
+</html>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  :root{
+    --size-h2: 2.5rem;
+    --letter-space:1.5px;
+  }
+  /* body {
+    box-sizing: border-box;
+  } */
+</style>
+
+
