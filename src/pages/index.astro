@@ -1,10 +1,12 @@
 ---
-import Layout from "../components/layout.astro";
 import Header from "../components/header.astro";
 import Banner from "../components/banner.astro";
 import About from "../components/about.astro";
 import Cards from "../components/cards.astro";
-import SliderPartners from "../components/sliderPartners.astro"
+import SliderPartners from "../components/sliderPartners.astro";
+import Teams from "../components/teams.astro";
+import Founders from "../components/founders.astro";
+import Footer from "../components/footer.astro";
 ---
 
 <!doctype html>
@@ -12,7 +14,11 @@ import SliderPartners from "../components/sliderPartners.astro"
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../../Diseño sin título (1).png"
+    />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>DNAcol</title>
@@ -22,7 +28,10 @@ import SliderPartners from "../components/sliderPartners.astro"
     <Banner />
     <About />
     <Cards />
-    <SliderPartners/>
+    <Founders />
+    <Teams />
+    <SliderPartners />
+    <Footer />
 
     <script type="text/javascript">
       window.addEventListener("scroll", () => {
@@ -40,24 +49,43 @@ import SliderPartners from "../components/sliderPartners.astro"
 
     <script
       src="https://kit.fontawesome.com/b992314f76.js"
-      crossorigin="anonymous">
-    </script>
+      crossorigin="anonymous"></script>
   </body>
 </html>
 
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+  /* .league-spartan-<uniquifier> {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+  /* .open-sans-<uniquifier> {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
   * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
-  :root{
-    --size-h2: 2.5rem;
-    --letter-space:1.5px;
+  :root {
+    --size-h1: 4rem;
+    --size-h2: 3rem;
+    --letter-space: 1.5px;
+    --first-color: #0d4224;
+    --second-color: #006838;
+    --third-color: #f1efea;
+    --first-font: "League Spartan", sans-serif;
+    --second-font: "Open Sans", sans-serif;
+    --font-size-p: 1.5rem;
+    --font-size-h-card: 25px;
+    --font-color-global: rgba(67, 68, 68, 1);
   }
-  /* body {
-    box-sizing: border-box;
-  } */
 </style>
-
-

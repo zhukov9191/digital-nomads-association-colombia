@@ -4,56 +4,92 @@
   <div class="slider">
     <div class="slide-track">
       <div class="slide">
-        <a href=""
-          ><img
-            src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-          /></a
+        <a href="">
+          <img src="../Andrés Luna Narváez (1).jfif" alt="" />
+        </a>
+      </div>
+      <div class="slide">
+        <a href="../CASTRO Y SALAZAR-1 - pamela jimenez.jpg">
+          <img src="" alt="" /></a
         >
       </div>
       <div class="slide">
-        <a href=""
-          ><img
-            src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-          /></a
-        >
+        <a href=""><img src="../Casa_Colibri_Logo.jpg" alt="" /></a>
+      </div>
+      <div class="slide">
+        <a href=""> <img src="../Juan Aguilar.jpg" alt="" /></a>
+      </div>
+      <div class="slide">
+        <a href=""><img src="../LIFFE DANCE STUDIOS .png" alt="" /></a>
       </div>
       <div class="slide">
         <a href=""
-          ><img
-            src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-          /></a
+          ><img src="../LOGO SIERRASANJUAN - Rafa Tapia.jpg" alt="" /></a
+        >
+      </div>
+      <div class="slide bicycle">
+        <a href=""><img src="../Louis Georgeot.png" alt="" /></a>
+      </div>
+      <div class="slide">
+        <a href=""><img src="../soñarte .png" alt="" /></a>
+      </div>
+      <div class="slide">
+        <a href=""><img src="../V1 - EON Xperts.png" alt="" /></a>
+      </div>
+      <div class="slide">
+        <a href=""><img src="../VECINO_COLIVING .jpg" alt="" /></a>
+      </div>
+      <!-- other -->
+      <div class="slide">
+        <a href="">
+          <img src="../Andrés Luna Narváez (1).jfif" alt="" />
+        </a>
+      </div>
+      <div class="slide">
+        <a href="">
+          <img src="../CASTRO Y SALAZAR-1 - pamela jimenez.jpg" alt="" /></a
         >
       </div>
       <div class="slide">
-        <a href=""
-          ><img
-            src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-          /></a
-        >
+        <a href=""><img src="../Casa_Colibri_Logo.jpg" alt="" /></a>
+      </div>
+      <div class="slide">
+        <a href=""> <img src="../Juan Aguilar.jpg" alt="" /></a>
+      </div>
+      <div class="slide">
+        <a href=""><img src="../LIFFE DANCE STUDIOS .png" alt="" /></a>
       </div>
       <div class="slide">
         <a href=""
-          ><img
-            src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-          /></a
+          ><img src="../LOGO SIERRASANJUAN - Rafa Tapia.jpg" alt="" /></a
         >
+      </div>
+      <div class="slide">
+        <a href=""><img src="../Louis Georgeot.png" alt="" /></a>
+      </div>
+      <div class="slide">
+        <a href=""><img src="../soñarte .png" alt="" /></a>
+      </div>
+      <div class="slide">
+        <a href=""><img src="../V1 - EON Xperts.png" alt="" /></a>
+      </div>
+      <div class="slide">
+        <a href=""><img src="../VECINO_COLIVING .jpg" alt="" /></a>
       </div>
     </div>
   </div>
 </div>
 <style>
-  .slider-container{
+  .slider-container {
     display: block;
-  }  
-  .slider-container h2{
+    margin: 5rem 0;
+  }
+  .slider-container h2 {
     font-size: var(--size-h2);
     letter-spacing: var(--letter-space);
     text-align: center;
+    font-family: var(--first-font);
+    color: var(--first-color);
   }
   .slider {
     width: 75vw;
@@ -61,16 +97,28 @@
     margin: auto;
     overflow: hidden;
   }
+  .slide {
+    padding: 1rem;
+  }
+
   .slider .slide-track {
     display: flex;
-    animation: scroll 40s linear infinite;
-    -webkit-animation: scroll 40s linear infinite;
-    width: calc(200px * 14);
+    animation: scroll 30s linear infinite;
+    -webkit-animation: scroll 20s linear infinite;
+    width: calc(350px * 10);
   }
   .slider .slide {
-    width: 200px;
+    width: 350px;
   }
-  .slider .slide a img {
+  .slider .slide img {
     width: 100%;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-350px * 5));
+    }
   }
 </style>

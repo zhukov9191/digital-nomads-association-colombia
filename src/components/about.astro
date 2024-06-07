@@ -1,23 +1,48 @@
 <div id="about" class="container">
-    <h2>About</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde quo omnis culpa repellat velit! Veniam ex quo cum reiciendis temporibus. Quis error, dolores tenetur sed quia consectetur hic officiis cum.</p>
+  <h2>About</h2>
+  <p>
+    The Digital Nomads Association Colombia connects, guides and inspires nomads around the world through their experience in Colombia, in harmony with its culture and the locals.
+  </p>
 </div>
 
 <style>
-    .container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 4rem;
-        box-sizing: border-box;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4rem;
+    box-sizing: border-box;
+    /* padding-bottom: 5rem */
+  }
+  .container h2 {
+    font-size: var(--size-h2);
+    letter-spacing: var(--letter-space);
+    font-family: var(--first-font);
+    color: var(--first-color);
+  }
+  .container p {
+    padding: 0 10rem;
+    font-family: var(--second-font);
+    text-align: justify;
+    font-size: var(--font-size-p);
+    color: var(--font-color-global);
+  }
+  @media (width < 970px) {
+    .container p {
+      padding: 0 8rem;
     }
-    .container h2{
-        font-size: var(--size-h2);
-        letter-spacing: var(--letter-space);
+  }
+  @media (width < 898px) {
+    .container p {
+      padding: 0 6rem;
     }
-    .container p{
-        padding: 0 10rem;
+  }
+  @media (width < 830px) {
+    .container p {
+      padding: 0 4rem;
+      font-family: var(--second-font);
     }
+  }
 </style>
