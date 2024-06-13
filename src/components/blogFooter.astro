@@ -2,17 +2,13 @@
   <div class="container-main">
     <!-- <img width="80px" src="../Diseño sin título (1).png" alt="" /> -->
     <h3>Logo</h3>
-    <nav>
-      <ul>
-        <li><a class="active" id="banner" href="">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#partners">Partners</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="">Contact us</a></li>
-        <li class="excepto"><a href="">Nomad Visa</a></li>
-      </ul>
-    </nav>
-
+    <div class="text">
+      <p>
+        DNAcolombia offers the opportunity to live unforgettable experiences for
+        digital nomads and freelancers. Don't wait any longer! Explore and join
+        our network of over 100K+ professionals on the go.
+      </p>
+    </div>
     <div class="social-container">
       <a href="https://www.facebook.com/francois.mongeau"
         ><i class="fa-brands fa-facebook"></i></a
@@ -28,13 +24,7 @@
       >
     </div>
   </div>
-  <div class="text">
-    <p>
-      DNAcolombia offers the opportunity to live unforgettable experiences for
-      digital nomads and freelancers. Don't wait any longer! Explore and join
-      our network of over 100K+ professionals on the go.
-    </p>
-  </div>
+
   <div class="copyrigth">
     <h5>DNAcol | © 2024 All Rights Reserved</h5>
   </div>
@@ -47,11 +37,11 @@
     align-items: center;
     font-family: var(--first-font);
   }
-  .text p{
+  .text p {
     font-family: var(--first-font);
   }
-  .copyrigth h5{
-    font-family: var(--first-font)
+  .copyrigth h5 {
+    font-family: var(--first-font);
   }
   .container-main h3 {
     color: var(--third-color);
@@ -64,7 +54,8 @@
     justify-content: center;
     padding: 2rem 5rem 0 5rem;
     box-sizing: border-box;
-    border-radius: 1rem 1rem 0 0 ;
+    overflow: hidden;
+    border-radius: 1rem 1rem 0 0;
   }
   .container-footer .text p {
     padding: 0 10rem;
@@ -84,6 +75,7 @@
   }
   .social-container a i {
     color: var(--third-color);
+    padding-right: 0.5rem;
   }
   .copyrigth {
     text-align: center;
@@ -107,5 +99,22 @@
     text-decoration: none;
     color: var(--third-color);
   }
+  /* @media (min-width<1292px) {
+    .social-container {
+      width: 50px;
+    }
+    
+  } */
+  @media(width<1292px){
 
+    .container-main .text p{
+        display: none;
+    }
+    
+    .container-main{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+  }
 </style>
