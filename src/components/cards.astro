@@ -58,8 +58,12 @@
   .container-cards {
     display: flex;
     flex-direction: column;
-    background: radial-gradient(, transparent) ;
-    /* padding: 5rem 0; */
+    animation-name: move;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+    
   }
  
   .container-cards h2 {
@@ -108,5 +112,17 @@
     text-align: justify;
     font-family: var(--second-font);
     color: var(--font-color-global);
+  }
+  @keyframes move {
+    from{
+      opacity: 0;
+      translate: 0 100px;
+      scale: 0.5;
+    }
+    to{
+      opacity: 1;
+      translate: 0 0;
+      scale: 1;
+    }
   }
 </style>

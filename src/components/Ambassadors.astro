@@ -1,0 +1,175 @@
+---
+
+---
+
+<div class="card-area">
+  <div class="wrapper">
+    <h2>Our Ambassadors</h2>
+    <p id="parrafo">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. A maiores dolor
+      molestiae! Ratione, repudiandae maiores accusamus architecto non ullam
+      velit amet tempore harum facere deserunt!
+    </p>
+    <div class="box-area">
+      <div class="box">
+        <img
+          src="https://i0.wp.com/digitalnomadsassociationcolombia.com/wp-content/uploads/2023/02/New-Product-Launch-Polaroids-Instagram-Post-1.png?resize=300%2C300&ssl=1"
+          alt=""
+        />
+        <div class="box-contend">
+          <h3>Jhon Darwin Herrera</h3>
+          <h4>Business consultant, accelerator and strategist</h4>
+          <p class="text">
+            John has been living a digital nomad lifestyle for over 4 years, traveling the world to observe how businesses and communication work. His Unique approach combines a fresh, friendly style with a wealth of knowledge and experience.
+          </p>
+          <div class="social-container">
+            <a href="https://www.facebook.com/JhonDarwin11"
+              ><i class="fa-brands fa-facebook"></i></a
+            >
+
+            <a href="https://www.instagram.com/jhondarwin11/"
+              ><i class="fa-brands fa-instagram"></i></a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <img
+          src="https://loremflickr.com/640/360"
+          alt=""
+        />
+        <div class="box-contend">
+          <h3>Jhonny Rios</h3>
+          <h4>Founder and Social Media Community Manager - Admin. of GringoPaisa (Americans in Medellín)</h4>
+          <p class="text">
+            Jhony is passionate about creating, teaching, and stimulating original and captivating content for a wide-ranging portfolio of local businesses as well as local and expat members located throughout the city by engaging and connecting with online audiences, fans, and consumers on Facebook and in person. 
+            <div class="social-container">
+              <a href="https://www.facebook.com/groups/173029852759738"
+                ><i class="fa-brands fa-facebook"></i></a
+              >
+              <a href="#"
+                ><i class="fa-brands fa-instagram"></i></a
+              >
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .wrapper {
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper h2 {
+    font-family: var(--first-font);
+    font-size: var(--size-h2);
+    letter-spacing: var(--letter-space);
+    color: var(--first-color);
+  }
+  .wrapper #parrafo{
+    padding: 0 10rem;
+    font-family: var(--second-font);
+    text-align: justify;
+    font-size: var(--font-size-p);
+    color: var(--font-color-global);
+  }
+  .card-area {
+    padding: 10px 40px;
+    animation-name: move;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+  }
+  .box-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+justify-content: center;  }
+  .box {
+    overflow: hidden;
+    position: relative;
+    border-radius: 1rem;
+  }
+  .text{
+    font-size: 0.8rem;
+  }
+  .box img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
+    border-radius: 10px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  .box-contend h3 {
+    font-family: var(--first-font);
+    font-size: var(--font-size-h-card);
+    color: var(--third-color);
+    text-shadow: 5px 5px 5px #000;
+    margin-bottom: 0;
+  }
+  .box-contend h4{
+    font-family: var(--first-font);
+    font-size: 0.9rem;
+    color: var(--third-color);
+    text-shadow: 5px 5px 5px #000;
+    margin-bottom: 0;
+  }
+  .box-contend p {
+    font-family: var(--second-font);
+    color: var(--third-color);
+    text-shadow: 5px 5px 5px #000;
+  }
+  
+  .social-container a i {
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    color: var(--third-color);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  .social-container a i:hover{
+    color: var(--second-color);
+  }
+
+  .box-contend {
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, var(--second-color) 52%);
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: height 0.5s;
+  }
+  .box:hover .box-contend {
+    height: 100%;
+  }
+  @keyframes move {
+    from{
+      opacity: 0;
+      translate: 0 100px;
+      scale: 0.5;
+    }
+    to{
+      opacity: 1;
+      translate: 0 0;
+      scale: 1;
+    }
+  }
+</style>

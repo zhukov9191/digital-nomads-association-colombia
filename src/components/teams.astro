@@ -92,8 +92,8 @@
         <div class="box-contend">
           <h3>Daniela</h3>
           <h4>Communications assistant</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque voluptatem et quo iure id totam magni quos officia mollitia nemo!
+          <p class="text-daniela">
+            Daniela is a graphic designer with a great passion for illustration. She is excited to start her journey as a digital nomad, combining her love for design with the freedom to work from anywhere. Daniela is eager to explore new opportunities and places while advancing her career!
           </p>
           <div class="social-container">
             <a href="https://www.facebook.com/francois.mongeau"
@@ -102,11 +102,32 @@
             <a href="https://www.linkedin.com/in/francois-mongeau-b615159/"
               ><i class="fa-brands fa-linkedin"></i></a
             >
-            <a href="https://www.instagram.com/francois.mongeau/"
+            <a href="https://www.instagram.com/daniela_lozano_16/"
               ><i class="fa-brands fa-instagram"></i></a
             >
-            <a href="Francois.mongeau@dnacol.com"
-              ><i class="fa-solid fa-envelope"></i></a
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <img
+          src="../silvia.jpeg"
+          alt=""
+        />
+        <div class="box-contend">
+          <h3>Silvia Madrón</h3>
+          <h4>Project Manager</h4>
+          <p class="text-daniela">
+            Silvia is a Digital Nomad from Como, Italy. She is passionated about languages, latin danses, and discovering foreign cultures. 
+          </p>
+          <div class="social-container">
+            <a href="https://www.facebook.com/silvia.madron/"
+              ><i class="fa-brands fa-facebook"></i></a
+            >
+            <a href="https://www.linkedin.com/in/silvia-madron/"
+              ><i class="fa-brands fa-linkedin"></i></a
+            >
+            <a href="https://www.instagram.com/silv14_m/"
+              ><i class="fa-brands fa-instagram"></i></a
             >
           </div>
         </div>
@@ -139,6 +160,11 @@
   }
   .card-area {
     padding: 10px 40px;
+    animation-name: move;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
   }
   .box-area {
     display: grid;
@@ -178,6 +204,9 @@ justify-content: center;  }
     color: var(--third-color);
     text-shadow: 5px 5px 5px #000;
   }
+  .text-daniela{
+    font-size: 0.9rem;
+  }
   .social-container a i {
     font-size: 1.3rem;
     padding-left: 1rem;
@@ -208,5 +237,17 @@ justify-content: center;  }
   }
   .box:hover .box-contend {
     height: 100%;
+  }
+  @keyframes move {
+    from{
+      opacity: 0;
+      translate: 0 100px;
+      scale: 0.5;
+    }
+    to{
+      opacity: 1;
+      translate: 0 0;
+      scale: 1;
+    }
   }
 </style>
